@@ -130,7 +130,7 @@ export const useChatStore = create((set, get) => ({
 
   deleteMessage: async (id) => {
     try {
-      const response = await axiosInstance.delete(`/message/${id}`);
+      const response = await axiosInstance.delete(`/messages/${id}`);
       return response.data;
     } catch (err) {
       throw err.response?.data || { message: 'Delete failed' };

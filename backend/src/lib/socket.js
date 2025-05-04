@@ -32,8 +32,9 @@ io.on("connection", (socket) => {
   socket.on("send-message", ({ to, message }) => {
     const receiverSocketId = getReceiverSocketId(to);
     if (receiverSocketId) {
+      // Emit the encrypted message directly
       io.to(receiverSocketId).emit("newMessage", {
-        message,
+        message,  // Encrypted message, leave encryption/decryption to the frontend
         senderId: userId,
       });
     }
