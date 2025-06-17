@@ -1,3 +1,4 @@
+// src/index.js
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -9,15 +10,16 @@ import path from "path";
 import authRoutes from "./routes/auth.route.js";
 import messageRoutes from "./routes/message.route.js";
 import { connectDB } from "./lib/db.js";
-import { app, server } from "./lib/socket.js";
+import { createSocketServer } from "./lib/socket.js";
 
+const app = express();
 const PORT = process.env.PORT || 5001;
 const __dirname = path.resolve();
 
 // CORS configuration
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "http://localhost:5173", // safer for both dev & prod
+    origin: process.env.CLIENT_URL || "http://localhost:5173",
     credentials: true,
   })
 );
@@ -40,7 +42,9 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-// Start server
+// Create socket server and start
+const { server } = createSocketServer(app);
+
 server.listen(PORT, () => {
   console.log("server is running on PORT: " + PORT);
   connectDB();
