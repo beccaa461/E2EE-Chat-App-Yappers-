@@ -1,12 +1,43 @@
-# React + Vite
+# Yappers – Secure End-to-End Encrypted Chat App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Yappers is a modern, responsive web chat application built with the MERN stack, offering secure end-to-end encrypted (E2EE) messaging between users. Designed for real-time communication with a sleek UI and robust backend, Yappers ensures your conversations remain private and protected.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Visit: https://e2ee-chat-app-yappers-19.onrender.com/
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- End-to-end encrypted messaging (E2EE)
+- User authentication with JWT and bcrypt
+- Real-time chat using Socket.IO
+- Responsive design for both desktop and mobile
+- Online/offline status indicators
+- Chat history with message timestamps
+- Clean and minimal user interface
+
+## Tech Stack
+
+**Frontend:**
+
+- React.js
+- Redux Toolkit
+- Socket.IO Client
+- CSS/Material UI (optional)
+
+**Backend:**
+
+- Node.js
+- Express.js
+- MongoDB with Mongoose
+- Socket.IO Server
+- JWT for authentication
+- Bcrypt for password hashing
+
+## Installation
+
+### 1. Clone the Repository
+
+```bash
+https://github.com/gaytritripathi121/E2EE-Chat-App-Yappers-
+
